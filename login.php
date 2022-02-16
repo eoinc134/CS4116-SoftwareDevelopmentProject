@@ -13,6 +13,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 	$uname = validate($_POST['uname']);
 	$pass = validate($_POST['password']);
+	
 
 	if (empty($uname)) {
 		header("Location: index.php?error=User Name is required");
@@ -21,12 +22,20 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
         header("Location: index.php?error=Password is required");
 	    exit();
 	}else{
-		$sql = "SELECT * FROM dating.users WHERE username='$uname' AND pass='$pass'";
 
 
+		$sql = "SELECT * FROM dating.users WHERE username='$uname'";
+		
 		$result = mysqli_query($conn, $sql);
 
+
 		$resultAsArray = (mysqli_fetch_assoc($result));
+
+		if(empty($resultAsArray)){
+
+		header("Location: index.php?error=Username not recognised");
+		exit();
+		}
 
 		if($uname == getUsername($resultAsArray) && $pass == getPassword($resultAsArray)){
 			$_SESSION['user_name'] = getUsername($resultAsArray);
@@ -34,16 +43,20 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 			$_SESSION['id'] = '79';
 			header("Location: home.php");
 			exit();
+}
 
+	else{
+		header("Location: index.php?error=Incorrect Password");
+	    exit();
 }
 	}
 		}
 
 
-else{
-	header("Location: index.php");
-	exit();
-}
+// else{
+// 	header("Location: index.php");
+// 	exit();
+// }
 
 
 function getUsernameAndPassword($array){

@@ -4,9 +4,7 @@ body {
 
 *{
 	font-family: sans-serif;
-
 } 
-
 
 .login {
     position: absolute;
@@ -15,10 +13,24 @@ body {
     transform: translate(-50%, -50%);
     padding: 10px;
     }
+
+.logout_button{
+	position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	text-decoration: none;
+}
  
 form {
 	width: 350px;
-    height: 350px;
+    height: 400px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -26,14 +38,8 @@ form {
     border: 5px solid #FFFF00;
     padding: 10px;
 	border: 2px solid #ccc;
-	/* padding: 30px; */
     margin: 0 auto;
 	background: #fff;
-    /* text-align: center;
-	align-items: center;
-	align-content: center; */
-    /* padding-bottom: 50px; */
-	/* border-radius: 300px; */
 } 
  
  h2 {
@@ -56,7 +62,6 @@ label {
 }
 
  button {
-	/* float: right; */
     margin: 0 auto;
     width: 110%;
     align-self: center;
@@ -64,7 +69,6 @@ label {
 	padding: 10px 15px;
 	color: #fff;
 	align-items: center;
-	/* border-radius: 5px; */
 	margin-right: auto;
 	border: none;
 }  
@@ -108,7 +112,7 @@ h1 {
 	text-align: center;
 } 
 
- a {
+ /* a {
 	float: right;
 	background: #555;
 	padding: 10px 15px;
@@ -117,7 +121,7 @@ h1 {
 	margin-right: 10px;
 	border: none;
 	text-decoration: none;
-} 
+}  */
  a:hover{
 	opacity: .7;
 }  
