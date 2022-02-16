@@ -2,10 +2,13 @@
 <html>
 <head>
 	<title>LOGIN</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+
+	
      <form action="login.php" method="post">
+	 <div class="login">
      	<h2>LOGIN</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
@@ -13,10 +16,12 @@
      	<label>User Name</label>
      	<input type="text" name="uname" placeholder="User Name"><br>
 
-     	<label>User Name</label>
+     	<label>Password</label>
      	<input type="password" name="password" placeholder="Password"><br>
 		 
      	<button type="submit">Login</button>
-     </form>
+		 </div>
+	</form>
+	
 </body>
 </html>
