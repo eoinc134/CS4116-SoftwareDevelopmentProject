@@ -1,10 +1,10 @@
 <?php
 
-$sname= "localhost:3306";
+$sname= "localhost:8889";
 $unmae= "root";
 $password = "root";
 
-$db_name = "dating";
+$db_name = "cs4116";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 

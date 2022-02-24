@@ -2,7 +2,7 @@
 session_start(); 
 include "db_conn.php";
 
-if (isset($_POST['uname']) && isset($_POST['password'])) {
+if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmPassword'])) {
 
 	function validate($data){
        $data = trim($data);
@@ -17,20 +17,36 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 		return $data;
 	}
 
+	function matchingPass($pass1, $pass2){ //passwords dont get trimmed
+		if($pass1 == $pass2) {
+			return true;
+		}
+		return false;
+	}
+
 	$uname = validate($_POST['uname']);
 	$pass = validatePass($_POST['password']);
+	$passConfirm = validatePass($_POST['confirmPassword']);
+
+
 	
 
-	if (empty($uname)) {
-		header("Location: index.php?error=User Name is required");
+	if (empty($email)) {
+		header("Location: index.php?error=Email is required");
 	    exit();
 	}else if(empty($pass)){
         header("Location: index.php?error=Password is required");
 	    exit();
-	}else{
+	}else if(empty($passConfirm)){
+        header("Location: index.php?error=Confirm password is required");
+	    exit();
+	}else if(matchingPass($pass, $passConfirm) == false){
+		header("Location: index.php?error=Passwords do not match, please try again");
+	    exit();
+	}else {
 
 
-		$sql = "SELECT * FROM cs4116.dating WHERE user='$uname'";
+		$sql = "INSERT INTO dating (user, pass) VALUES ('$uname', '$pass');";
 		
 		$result = mysqli_query($conn, $sql);
 
@@ -39,8 +55,8 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 		if(empty($resultAsArray)){
 
-			header("Location: index.php?error=Username not recognised");
-			exit();
+		header("Location: index.php?error=Username not recognised");
+		exit();
 		}
 
 		if($uname == getUsername($resultAsArray) && $pass == getPassword($resultAsArray)){
@@ -49,14 +65,14 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 			$_SESSION['id'] = '79';
 			header("Location: home.php");
 			exit();
-		}
-
-		else{
-			header("Location: index.php?error=Incorrect Password");
-			exit();
-		}
-	}
 }
+
+	else{
+		header("Location: index.php?error=Incorrect Password");
+	    exit();
+}
+	}
+		}
 
 
 // else{
