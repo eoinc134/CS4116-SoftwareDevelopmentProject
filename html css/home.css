@@ -1,0 +1,12 @@
+.image img{
+    
+
+    /* max-width: 10px; */
+    height: 350px;
+    object-fit: fill;
+
+}
+
+.paragraph{
+    height: 70%;
+}

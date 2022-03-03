@@ -1,0 +1,46 @@
+.nav-title {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black ;
+}
+
+.nav-title:hover {
+    color: yellow;
+}
+
+.content{
+    background-color: white;
+   
+}
+
+.image img{
+
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-left: -10px;
+    margin-bottom: -15px;
+}
+
+.form-box{
+    margin-top: 40px;
+    padding-right: 40px;
+}
+
+.btn{
+    padding-right: 100px;
+    padding-left: 100px;
+
+} 
+
+.sign{
+    margin-left: 115px;
+
+}
+
+.sign a{
+    color: black;
+
+}
+

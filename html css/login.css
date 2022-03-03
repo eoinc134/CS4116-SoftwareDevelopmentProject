@@ -1,0 +1,108 @@
+
+
+
+
+.nav-title {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black ;
+}
+
+.nav-title:hover {
+    color: yellow;
+}
+
+.col-lg{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+
+}
+
+.image{
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+ 
+.btn{
+    padding-right: 100px;
+    padding-left: 100px;
+
+} 
+
+
+.sign{
+    margin-left: 100px;
+
+}
+
+.sign a{
+    color: black;
+
+}
+/* .title{
+    background-color: #00eeff;
+    margin: auto;
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.center{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box{
+    background: white;
+    padding: 200px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+
+.form-group{
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+input[type="text"].form-group, input[type="password"].form-control{
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #CCC ;
+    padding: 220px;
+    border-radius: 2px;
+    transition: all 0.3S ease;
+}
+
+button{
+    outline: none;
+    background: #00ffff;
+    padding:6px;
+    display: block;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+} */
