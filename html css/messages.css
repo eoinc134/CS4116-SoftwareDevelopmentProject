@@ -1,0 +1,109 @@
+.nav-title {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black ;
+}
+
+.nav-title:hover {
+    color: white;
+}
+
+.btn{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    background-color: white; 
+    border: 2px solid black;
+    display: table;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.home, .messages, .profile{
+    height: 30%;    
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.messages{
+    background-color: black;
+    
+}
+
+.home a:hover {
+    color: cyan;
+}
+
+.messages a:hover {
+    color: white;
+}
+
+.profile a:hover {
+    color: cyan;
+}
+
+.chatWindow{
+    margin-top: 3%;
+    height: 75%;
+    width: 80%;
+    position: fixed;
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+}
+
+.openChat{
+    height: 100%;
+    width: 75%;
+    background-color: cyan; 
+    display: table;
+}
+
+.chatList{
+    height: 100%;
+    width: 25%;
+    background-color: orange; 
+    border: 1px solid black;
+}
+
+.profileHeader{
+    width: 100%;
+    height: 15%;
+    background-color: purple;
+    border: 1px solid black;
+}
+
+.chatBox{
+    width: 100%;
+    height: 76%;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1%;
+}
+
+.chatHeader{
+    width: 100%;
+    height: 15%;
+    background-color: green;
+    border: 1px solid black;
+}
+
+.activeChats{
+    width: 100%;
+    height: 85%;
+    background-color: orangered;
+    border: 1px solid black;
+}
